@@ -1,0 +1,67 @@
+{
+  "name": "memory-x-dsh",
+  "version": "0.3.0",
+  "type": "module",
+  "description": "A long-term memory tree for DeepSeek Harness (DSH): memory tools for the agent, prompt recall, and a read-only Web panel.",
+  "license": "MIT",
+  "author": "allmonday",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allmonday/memory-x-dsh.git"
+  },
+  "homepage": "https://github.com/allmonday/memory-x-dsh#readme",
+  "bugs": {
+    "url": "https://github.com/allmonday/memory-x-dsh/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "memory",
+    "memory-tree",
+    "agent-memory"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./service": "./service.js",
+    "./tools": "./tools.js",
+    "./core": "./core/index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "service.js",
+    "tools.js",
+    "core",
+    "scripts",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg"
+  ],
+  "scripts": {
+    "build:core": "node scripts/build-core.mjs",
+    "check:core": "node scripts/build-core.mjs --check",
+    "port:upstream-tests": "node scripts/port-upstream-tests.mjs",
+    "backup": "node scripts/backup.mjs --label manual",
+    "test": "node --test tests/*.test.mjs tests/upstream/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

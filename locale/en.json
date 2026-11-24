@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Memory tree",
+    "description": "Keeps a long-term memory tree across sessions, with memory tools for the agent and a read-only panel that shows the tree, its history, and its diffs.",
+    "detail": "docs/DETAIL.md"
+  }
+}

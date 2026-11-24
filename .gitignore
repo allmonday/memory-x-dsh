@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output of the TypeScript core is committed on purpose: the plugin ships
+# plain ESM so that installing it needs no build step. Do not ignore core/*.js.
+#
+# Scratch output from `npm run build:core` if it ever grows a dist/ folder:
+dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs and local env
+*.log
+npm-debug.log*
+.env
+.env.*
+
+# Memory data: the tree is personal, never belongs in the repository
+.memory/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+backups/
+
+# Test and coverage output
+coverage/
+.nyc_output/
+.test-output/
+
+# Patch files kept next to the code during local debugging
+*.patch
+!cordis.patch.yml

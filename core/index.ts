@@ -1,0 +1,14 @@
+export { MemoryFile, MEMORY_FILE } from "./memory-file.js";
+export { parseMarkdown, ParseError, ROOT_TITLE, MAX_DEPTH } from "./parser.js";
+export { serializeMarkdown, serializeSubtree, serializeOutline } from "./serializer.js";
+export { tocDigest, dumpTree, type TocOptions, type DumpOptions } from "./digest.js";
+export { deriveSummary, effectiveSummary, summaryHash, SUMMARY_MAX_CHARS, type SummaryOptions } from "./summary.js";
+export { withDirLock } from "./lock.js";
+export { diffTrees, diffToChangeRows, flattenTree, type TreeDiff, type LeafRef, type NodeRef } from "./tree-diff.js";
+export { diffLines, diffStats, diffRows, formatDiff, type DiffLine, type DiffRow } from "./diff.js";
+export { lintTree, suggestPath, type LintIssue, type LintOptions } from "./lint.js";
+export { MemoryStore, STORE_DIR, DB_FILE, escapeLike, leafHash, ensureUids, type SearchHit, type Episode, type EvidenceRef, type ChangeRow, type HistoryRow, type NodeMetaState, type DeltaEntry, type LeafDeltaEntry, type TreeDelta, type DayDigest } from "./store.js";
+export { parsePath, resolvePath, splitDisambig, levenshtein, enumerateNodePaths, canonicalPathOf } from "./path.js";
+export { upsertNode, moveNode, deleteNode, stripDateMark } from "./ops.js";
+export { applyOps, OpError, TREE_OP_NAMES, type TreeOp } from "./ops-batch.js";
+export type { MemoryNode, OpResult, Resolved } from "./types.js";

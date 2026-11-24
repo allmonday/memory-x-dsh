@@ -1,0 +1,11 @@
+# Memory tree bundle: one Host row plus the browser half that renders its panel.
+# The row's `config` is the installation's own; overriding it in the profile
+# patch layer replaces the whole object, so state every key you set.
+- insert:
+    - id: memory-x-dsh
+      name: 'memory-x-dsh'
+      config:
+        dataDir: '' # empty = ~/.dsh/memory-x/memory
+        anchor: hint # off | hint | strict
+        recallMinScore: 1.0
+        catalogMaxChars: 1600

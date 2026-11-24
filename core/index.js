@@ -1,0 +1,13 @@
+export { MemoryFile, MEMORY_FILE } from "./memory-file.js";
+export { parseMarkdown, ParseError, ROOT_TITLE, MAX_DEPTH } from "./parser.js";
+export { serializeMarkdown, serializeSubtree, serializeOutline } from "./serializer.js";
+export { tocDigest, dumpTree,                                   } from "./digest.js";
+export { deriveSummary, effectiveSummary, summaryHash, SUMMARY_MAX_CHARS,                     } from "./summary.js";
+export { withDirLock } from "./lock.js";
+export { diffTrees, diffToChangeRows, flattenTree,                                           } from "./tree-diff.js";
+export { diffLines, diffStats, diffRows, formatDiff,                             } from "./diff.js";
+export { lintTree, suggestPath,                                  } from "./lint.js";
+export { MemoryStore, STORE_DIR, DB_FILE, escapeLike, leafHash, ensureUids,                                                                                                                                                                           } from "./store.js";
+export { parsePath, resolvePath, splitDisambig, levenshtein, enumerateNodePaths, canonicalPathOf } from "./path.js";
+export { upsertNode, moveNode, deleteNode, stripDateMark } from "./ops.js";
+export { applyOps, OpError, TREE_OP_NAMES,             } from "./ops-batch.js";

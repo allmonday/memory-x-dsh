@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <!-- A small branching tree: one root, two child nodes, drawn as a mind map. -->
+  <g fill="none" stroke="#3f8f6f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 9.5v6.5"/>
+    <path d="M18 16h-6.5v4.5"/>
+    <path d="M18 16h6.5v4.5"/>
+  </g>
+  <g fill="#3f8f6f">
+    <circle cx="18" cy="7" r="2.9"/>
+    <rect x="7.4" y="20.4" width="8.2" height="7.2" rx="2.2"/>
+    <rect x="20.4" y="20.4" width="8.2" height="7.2" rx="2.2"/>
+  </g>
+</svg>
